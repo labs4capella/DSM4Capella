@@ -1,0 +1,1 @@
+The **AIDA_basic** model is a model light inspired in the AIDAArchitecture  of IRT Saint Exupéry [AIDA / AIDAArchitecture · GitLab (irt-saintexupery.com)](https://sahara.irt-saintexupery.com/AIDA/AIDAArchitecture) used as a case study for DS4Capella.
