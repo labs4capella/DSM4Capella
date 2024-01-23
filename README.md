@@ -6,7 +6,7 @@ DSM4Capella allows to get a best logical architecture applying Design Structure 
 
 It is used to systematically identify, dene, tabulate, design, and analyze functional and physical interfaces [3].
 
-![Initial dsm](../DSM4Capella/icons/initial_dsm.png "initial DSM")
+![Initial dsm](./DSM4Capella/icons/initial_dsm.png "initial DSM")
 
 source: Samares Engineering
 
@@ -20,15 +20,15 @@ Is the degree of interdependence between subsystems, where the low coupling is o
 
 - Start modularization
 
-![loading-ag-175](../DSM4Capella/icons/dsm_process.jpg)
+![loading-ag-175](./DSM4Capella/icons/dsm_process.jpg)
 
 - Permutate and recalculate the number of interactions
 
-![loading-ag-177](../DSM4Capella/icons/dsm_result.jpg)
+![loading-ag-177](./DSM4Capella/icons/dsm_result.jpg)
 
 As a result the functions allocated to components (modules) are:
 
-![loading-ag-179](../DSM4Capella/icons/dsm_result_diagram.png)
+![loading-ag-179](./DSM4Capella/icons/dsm_result_diagram.png)
 
 source: Samares Engineering
 
@@ -36,7 +36,7 @@ source: Samares Engineering
 
 To calculate the coupling have been taken the work of Khetan Y., Gauthier J.M.? Dubé S.[1].
 
-![loading-ag-181](../DSM4Capella/icons/coupling_value_formula.jpg)
+![loading-ag-181](./DSM4Capella/icons/coupling_value_formula.jpg)
 
 source:[1]
 
@@ -46,7 +46,7 @@ As algorithm to execute is applied the genetic algorithm.
 
 ### Genetic Algorithm summary process
 
-![loading-ag-183](../DSM4Capella/icons/GA%20Diagram.jpg)
+![loading-ag-183](./DSM4Capella/icons/GA%20Diagram.jpg)
 
 source: [1]
 
@@ -60,13 +60,13 @@ Starts condition:
 
 - some Logical Functions pre-allocated
 
-![loading-ag-185](../DSM4Capella/icons/lab_initial.jpg)
+![loading-ag-185](./DSM4Capella/icons/lab_initial.jpg)
 
 source: Samares Engineering
 
 - Use the Python4Capella extension to automate the allocation process and create the logical component relationship within the Capella model
 
-![Resultat](../DSM4Capella/icons/lab_result.jpg)
+![Resultat](./DSM4Capella/icons/lab_result.jpg)
 
 source: Samares Engineering
 
