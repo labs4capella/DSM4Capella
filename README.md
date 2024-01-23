@@ -1,92 +1,95 @@
-# Capella-N2
+# DSM4Capella
 
+DSM4Capella allows to get a best logical architecture applying Design Structure Matrix giving a minimun coupling value based on initial parameters of genetic algorithm. This approach is an extend of previous work of Khetan Y., Gauthier J. M. and Dubé S.[1].
 
+> The design structure matrix  is a square matrix (i.e., it has an equal number of rows and columns) that shows relationships between elements in a system [2].
 
-## Getting started
+It is used to systematically identify, dene, tabulate, design, and analyze functional and physical interfaces [3].
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+![Initial dsm](./icons/initial_dsm.png "initial DSM")
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+source: Samares Engineering
 
-## Add your files
+## Coupling
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Is the degree of interdependence between subsystems, where the low coupling is often a sign of a well-structured system and a good design.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/samaresr-d/capella-n2.git
-git branch -M main
-git push -uf origin main
-```
+> They can be used during System Architecture Definition with the goal of **keeping the interfaces as simple as possible** [3].
 
-## Integrate with your tools
+### Coupling process
 
-- [ ] [Set up project integrations](https://gitlab.com/samaresr-d/capella-n2/-/settings/integrations)
+- Start modularization
 
-## Collaborate with your team
+![loading-ag-175](./icons/dsm_process.jpg)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- Permutate and recalculate the number of interactions
 
-## Test and Deploy
+![loading-ag-177](./icons/dsm_result.jpg)
 
-Use the built-in continuous integration in GitLab.
+As a result the functions allocated to components (modules) are:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+![loading-ag-179](./icons/dsm_result_diagram.png)
 
-***
+source: Samares Engineering
 
-# Editing this README
+## Formula to calculate coupling value
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+To calculate the coupling have been taken the work of Khetan Y., Gauthier J.M.? Dubé S.[1].
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+![loading-ag-181](./icons/coupling_value_formula.jpg)
 
-## Name
-Choose a self-explaining name for your project.
+source:[1]
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+At this time, the method considers the input and output control values to be zero because only input and output data are considered in the Capella model.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+As algorithm to execute is applied the genetic algorithm.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Genetic Algorithm summary process
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+![loading-ag-183](./icons/GA%20Diagram.jpg)
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+source: [1]
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## Demo in capella model supported by Python4Capella
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+For demo has been created a simplified model of the AIDA (Aircraft Inspection by DroneAssistant) system, that is a Remotely Piloted Aircraft System (RPAS) project. It is composed of a quadcopter drone, a control computer and a remote control. The mission ofthis system is to help the pilot to inspect the aircraft before flight [4].
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Starts condition:
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- there are some flexibility to allocate the Logical Functions 
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- some Logical Functions pre-allocated
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+![loading-ag-185](./icons/lab_initial.jpg)
 
-## License
-For open source projects, say how it is licensed.
+source: Samares Engineering
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Use the Python4Capella extension to automate the allocation process and create the logical component relationship within the Capella model
+
+![Resultat](./icons/lab_result.jpg)
+
+source: Samares Engineering
+
+The method proposed can be useful :
+
+* For system engineer to optimize the logical architecture
+
+* For a company with a logical architecture constrained by its organization and/or experience / existing systems
+  
+  * Interesting if and only if there's flexibility left to allocate functions on the systems
+
+## References
+
+[1] Khetan Y., Gauthier J.M., Dubé S. Part 5 – Coupling optimization of logical architecture using genetic algorithm. 2020. [Part 5 – Coupling optimization of logical architecture using genetic algorithm – Samares Engineering (samares-engineering.com)](https://www.samares-engineering.com/en/2020/07/31/part-5-coupling-optimization-of-logical-architecture-using-genetic-algorithm/)
+
+[2]Design Structure Matrix Conference [Introduction to DSM – The Design Structure Matrix (DSM) (dsmweb.org)](https://dsmweb.org/introduction-to-dsm/)
+
+[3] System Engineering Handbook. A Guide for System Life Cycle Processes and Activities.Part 3 Life Cycle Analyses and Methods. 5th edition. 2023. Pg 205.
+
+[4] Capella model Version V4.5 [AIDA /](https://sahara.irt-saintexupery.com/AIDA/AIDAArchitecture) [AIDAArchitecture](https://sahara.irt-saintexupery.com/AIDA/AIDAArchitecture) [· GitLab(irt-saintexupery.com)](https://sahara.irt-saintexupery.com/AIDA/AIDAArchitecture)
+
+**Contacts:**
+
+mirna.ojeda@Samares-Engineering.com
+
+sebastien.dube@Samares-Engineering.com
