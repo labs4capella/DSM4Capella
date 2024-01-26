@@ -530,26 +530,6 @@
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="a6f492cb-069b-4e5c-ad63-8a2f9ebc384f" targetElement="#12ffd844-0970-4310-9921-c743630ca855"
                 sourceElement="#6c5dc2c5-fddd-49e3-97ef-e082ab5ede68"/>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="2ad6e89a-074a-4786-98f9-f2513ce72aef" name="Flight Mgt Subsystem_to_Propulsion Subsystem"
-                source="#beb8b9bb-58f5-44f8-a48d-7e4dc42c5183" target="#28f342c5-2e14-487e-90f7-771cab06bb62"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="65538a15-efac-452a-ab44-6ed31adf2909" targetElement="#d735f98b-3576-4ca8-986e-50b02822c889"
-                  sourceElement="#2ad6e89a-074a-4786-98f9-f2513ce72aef"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="efee72ac-b951-4624-8e18-074f388ed364" targetElement="#df66f7fa-f4ac-4e0b-a019-47e35ffa777e"
-                  sourceElement="#2ad6e89a-074a-4786-98f9-f2513ce72aef"/>
-            </ownedComponentExchanges>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="beb8b9bb-58f5-44f8-a48d-7e4dc42c5183" name="CompPortOUT_5" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="6ce05a04-de29-4eaf-b1e3-0484ad855cc9" name="CompPortIN_6" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="0a1fd66c-9eaf-48ff-ba2b-0b506b0120d0" name="CompPortIN_12" orientation="IN"
-                kind="FLOW"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="a627364e-0625-4ae0-bf50-b5b192e0d8ce" name="Mission Mgt Subsystem">
@@ -559,175 +539,18 @@
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="38bcd83c-a4c4-4ace-83b3-1772cea69d3e" targetElement="#7f781284-31bf-4762-9e6b-d8328ca6643e"
                 sourceElement="#a627364e-0625-4ae0-bf50-b5b192e0d8ce"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="22c3ec83-087b-47ba-9d07-b81a727e4853" targetElement="#d3edb843-4572-4e63-a1b6-0c4fe9930678"
-                sourceElement="#a627364e-0625-4ae0-bf50-b5b192e0d8ce"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="ebda5860-9eb7-444e-af52-bdc79bf4110c" targetElement="#e7a6c3c2-95bb-4508-a963-4da68be13c58"
-                sourceElement="#a627364e-0625-4ae0-bf50-b5b192e0d8ce"/>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="fb69e2e2-15dd-4d7f-a7fb-7b8d2fc97bba" name="Mission Mgt Subsystem_to_Flight Mgt Subsystem"
-                source="#25b7ab33-23a1-4805-8687-c71debbcc0c6" target="#6ce05a04-de29-4eaf-b1e3-0484ad855cc9"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="71cff3cc-af66-4ba3-9891-d479e8476e0f" targetElement="#d1704363-f3c0-40e4-bbd6-116cc8dc8a91"
-                  sourceElement="#fb69e2e2-15dd-4d7f-a7fb-7b8d2fc97bba"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="6d715da8-49aa-4f98-9101-65cb7b316ec8" targetElement="#70ccf6c4-fde7-4e12-bc74-f8fc3a4764d9"
-                  sourceElement="#fb69e2e2-15dd-4d7f-a7fb-7b8d2fc97bba"/>
-            </ownedComponentExchanges>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="5508e474-ad0e-42ea-83ca-c7b79aed70cc" name="Mission Mgt Subsystem_to_UAV Control Station Subsystem"
-                source="#799c7acb-9a6f-4a2c-8910-1fbece50c067" target="#6af7268f-8716-4500-9bfd-bbfa04c71c8e"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="b0137505-fa84-4fe1-b2a1-292fafed7fce" targetElement="#90004696-49e3-4553-b8f8-689e6eb8aa38"
-                  sourceElement="#5508e474-ad0e-42ea-83ca-c7b79aed70cc"/>
-            </ownedComponentExchanges>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="25b7ab33-23a1-4805-8687-c71debbcc0c6" name="CompPortOUT_6" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="799c7acb-9a6f-4a2c-8910-1fbece50c067" name="CompPortOUT_7" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="fb7360d2-b0b2-4af5-b599-d33dcbacca1a" name="CompPortIN_13" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="e6dc19fd-183e-4fd3-9e2b-246376ad92ce" name="CompPortIN_16" orientation="IN"
-                kind="FLOW"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="e4494d17-ca71-477a-b11e-c8fc3734bab7" name="Propulsion Subsystem">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="8bbf8b90-3dcc-466c-8f0d-e0869a13ca14" targetElement="#fb4a59ca-9963-4d32-926e-96e55654d94a"
                 sourceElement="#e4494d17-ca71-477a-b11e-c8fc3734bab7"/>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="1877cc1a-c51e-408f-9625-72c4170d2057" name="Propulsion Subsystem_to_UAV Pilot"
-                source="#11997c97-eaf0-4b88-adf6-7d42c2b1ebdc" target="#9ee84781-7b7b-4bbe-8f99-d04a13aecd79"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="881640f4-8524-4334-b937-ff8ac151c529" targetElement="#3486bc7f-c8e4-46db-9e76-92eadda9f346"
-                  sourceElement="#1877cc1a-c51e-408f-9625-72c4170d2057"/>
-            </ownedComponentExchanges>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="28f342c5-2e14-487e-90f7-771cab06bb62" name="CompPortIN_5" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="11997c97-eaf0-4b88-adf6-7d42c2b1ebdc" name="CompPortOUT_9" orientation="OUT"
-                kind="FLOW"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="b522bbcc-4a41-44d7-ac64-9573c76aeda8" name="UAV Control Station Subsystem">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="2217f87f-56b9-4f6a-aa87-f52455e6a0b6" targetElement="#f0ee1206-c858-4b93-bdaf-79978310dea8"
                 sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="8ffc9c8d-8bdd-476f-a238-8cc0cc9082d1" targetElement="#16237741-f990-4a8b-b545-02dd2cbef182"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="cb8a5144-c3d5-4c3c-a811-18f2ca4768e9" targetElement="#2e611400-fdd2-47d1-a5c9-70d32767f55b"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="73bee50b-20ad-4bf0-b734-f430ef7fc4be" targetElement="#a1836093-1b33-45ce-a29b-78aaff63f252"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="cbf68559-c76b-4459-985a-65b7c31d1f99" targetElement="#23e17bab-2ba1-4096-a40c-eff5219181e8"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="8cf23abe-d6ca-4c7d-8cff-244b4542c507" targetElement="#a516e4b6-5938-47bd-ab43-0e65abcfffef"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="1e36ddb9-8314-4eae-b2dd-1dd254fb4730" targetElement="#7a131d6c-7af0-4b9f-99bf-181ee32c8796"
-                sourceElement="#b522bbcc-4a41-44d7-ac64-9573c76aeda8"/>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="8c514a51-f189-4e15-b3dd-952639480ca2" name="UAV Control Station Subsystem_to_Aircraft Company Database"
-                source="#13e558c6-8668-4f70-88c5-ca51b2d4162f" target="#c959f6be-31f5-4093-b896-c597ec90a4fa"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="2aad8850-73c7-4c05-b885-336006269222" targetElement="#30a33dda-5342-40cb-998a-fb6000d7425f"
-                  sourceElement="#8c514a51-f189-4e15-b3dd-952639480ca2"/>
-            </ownedComponentExchanges>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="fec93d48-a231-4ff2-bf70-cde0b2a079cb" name="UAV Control Station Subsystem_to_Flight Mgt Subsystem"
-                source="#0dd27b46-0cdb-4f23-a1d6-cddaaa4e64aa" target="#0a1fd66c-9eaf-48ff-ba2b-0b506b0120d0"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="756c76f9-4afe-4814-a361-6d9bcd8ed468" targetElement="#818d064d-5c8a-4921-b80c-7f902523f93d"
-                  sourceElement="#fec93d48-a231-4ff2-bf70-cde0b2a079cb"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="412b486e-6cd6-4720-b510-01bc7bea735b" targetElement="#7facebff-14e1-435b-96b0-21c4cfaa3bd9"
-                  sourceElement="#fec93d48-a231-4ff2-bf70-cde0b2a079cb"/>
-            </ownedComponentExchanges>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="7ad7a50b-8015-4f27-869e-5fbb6f44359c" name="UAV Control Station Subsystem_to_Mission Mgt Subsystem"
-                source="#4d00a9b7-ef0c-4b35-b0a7-06af9bd71cbd" target="#fb7360d2-b0b2-4af5-b599-d33dcbacca1a"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="149b163a-2d83-4fc7-a707-36976a9995d6" targetElement="#559411ac-39a0-452a-a460-0c6db7aee472"
-                  sourceElement="#7ad7a50b-8015-4f27-869e-5fbb6f44359c"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="3a72901f-7e3a-4c5d-969b-051d18a0fecd" targetElement="#6bcca4ef-6922-452d-b57d-88045cccd599"
-                  sourceElement="#7ad7a50b-8015-4f27-869e-5fbb6f44359c"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="e363e9fc-30b6-4000-a619-2b5e124cc7b3" targetElement="#4afc5808-b999-4f51-8e39-16fdccb05e00"
-                  sourceElement="#7ad7a50b-8015-4f27-869e-5fbb6f44359c"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="2d65867d-7441-4a47-9f9b-39a0f0f22117" targetElement="#c37c78cf-da04-4864-969d-f46774dd6ecb"
-                  sourceElement="#7ad7a50b-8015-4f27-869e-5fbb6f44359c"/>
-            </ownedComponentExchanges>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="15f86515-e143-4bed-ba71-2417c501bfe9" name="UAV Control Station Subsystem_to_UAV Pilot"
-                source="#e8c9e3f5-2b1c-4d02-aea0-621184225d59" target="#110e3178-c85a-4bf0-a232-b249b987b182"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="1b94b218-7a06-46af-a9cc-6fc55c094a1a" targetElement="#9819d4ec-e948-4445-b2cd-94a5f55872c6"
-                  sourceElement="#15f86515-e143-4bed-ba71-2417c501bfe9"/>
-            </ownedComponentExchanges>
-            <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-                id="77cf6693-5b01-4a33-a7f0-e667f550375d" name="UAV Control Station Subsystem_to_Vision Subsystem"
-                source="#d8b0cff9-5f78-4f92-9c66-5fb38c9fa6fd" target="#6412e6a8-88bb-49b2-b940-4c6707ecd35e"
-                kind="FLOW">
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="0ec34f64-34f3-4cd0-a033-e89067d32f0d" targetElement="#3d2a3939-f6b4-4e49-92a3-bf173ac26580"
-                  sourceElement="#77cf6693-5b01-4a33-a7f0-e667f550375d"/>
-              <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                  id="8feca5a7-5849-4d68-a854-ffff6430544d" targetElement="#fcd5583c-df27-4ba2-bc20-78537ac00fd1"
-                  sourceElement="#77cf6693-5b01-4a33-a7f0-e667f550375d"/>
-            </ownedComponentExchanges>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="c57d7c8f-a2ee-4c42-a668-7eb2a80afdc2" name="CompPortIN_1" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="ab9ddcc1-03ce-4291-ad23-129b66591d21" name="CompPortIN_3" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="c5438e55-f046-4c46-822a-78258efb3fb5" name="CompPortIN_4" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="6af7268f-8716-4500-9bfd-bbfa04c71c8e" name="CompPortIN_7" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="7c3f097d-e09f-457d-9ac4-2a1d5292099a" name="CompPortIN_8" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="599d5e91-6116-49db-893e-3a2e3daf82bf" name="CompPortIN_10" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="13e558c6-8668-4f70-88c5-ca51b2d4162f" name="CompPortOUT_11" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="0dd27b46-0cdb-4f23-a1d6-cddaaa4e64aa" name="CompPortOUT_12" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="4d00a9b7-ef0c-4b35-b0a7-06af9bd71cbd" name="CompPortOUT_13" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="e8c9e3f5-2b1c-4d02-aea0-621184225d59" name="CompPortOUT_14" orientation="OUT"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="d8b0cff9-5f78-4f92-9c66-5fb38c9fa6fd" name="CompPortOUT_15" orientation="OUT"
-                kind="FLOW"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="fcb771a7-1cb3-45a6-ac97-b395972d4e36" name="Vision Subsystem">
@@ -737,12 +560,6 @@
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="2034ea91-d22f-454d-9f64-5b9da80afcf3" targetElement="#41779fec-b891-41d7-b99d-296b9a4befcd"
                 sourceElement="#fcb771a7-1cb3-45a6-ac97-b395972d4e36"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="da61e53d-6fdc-41a9-b14c-5b41f38a552c" name="CompPortIN_2" orientation="IN"
-                kind="FLOW"/>
-            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-                id="6412e6a8-88bb-49b2-b940-4c6707ecd35e" name="CompPortIN_15" orientation="IN"
-                kind="FLOW"/>
           </ownedLogicalComponents>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
@@ -751,51 +568,18 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="b53bc598-9311-456b-9445-85684be27f3e" targetElement="#ca82ce86-9c2b-4a68-b092-f71bbc8573eb"
               sourceElement="#3e96c2d8-38a1-4cee-87e4-86b171af082e"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="21f997f0-1d9c-410e-b959-66142b87de94" name="Airline Human Operator_to_UAV Control Station Subsystem"
-              source="#96d97b5e-8471-42a1-9404-5acddbef41ae" target="#c5438e55-f046-4c46-822a-78258efb3fb5"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="177019b1-0a0a-47e5-ada0-9caecd036437" targetElement="#9b79da6d-f579-406b-87b1-6e8ca0682a01"
-                sourceElement="#21f997f0-1d9c-410e-b959-66142b87de94"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="96d97b5e-8471-42a1-9404-5acddbef41ae" name="CompPortOUT_4" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="cbf46138-f883-4264-9858-d8ae03ebde7b" name="Moving Obstacles" actor="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="637083f5-ecfe-493f-b68f-f55611548fde" targetElement="#ca88a902-cc0e-4474-b952-49f288dc635d"
               sourceElement="#cbf46138-f883-4264-9858-d8ae03ebde7b"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="5f3028f9-c809-429a-8b69-ee17a80e85a1" name="Moving Obstacles_to_UAV Control Station Subsystem"
-              source="#617502b8-62d6-4851-ab7b-4293c808be33" target="#7c3f097d-e09f-457d-9ac4-2a1d5292099a"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="254099b6-d23c-4199-88da-8b2e6053a2aa" targetElement="#89e3131a-e9a0-4890-a7d6-7a09d133f46a"
-                sourceElement="#5f3028f9-c809-429a-8b69-ee17a80e85a1"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="617502b8-62d6-4851-ab7b-4293c808be33" name="CompPortOUT_8" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="8e11758e-233f-48aa-a450-3d5739d1b784" name="Stationary Obstacle" actor="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="fd0062ed-3856-4e04-b141-dd56e10dc58a" targetElement="#99c74248-d8c5-432f-ab32-6a15d73129d5"
               sourceElement="#8e11758e-233f-48aa-a450-3d5739d1b784"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="9c25f1eb-f71a-4908-a011-431c87a187f0" name="Stationary Obstacle_to_UAV Control Station Subsystem"
-              source="#b9559709-8faa-484e-bbe1-ea2dd86437d7" target="#599d5e91-6116-49db-893e-3a2e3daf82bf"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="74cff387-4c7b-46b4-a8a4-d688c49d2f43" targetElement="#77bd86f1-d419-4d31-b674-051d25dbbf01"
-                sourceElement="#9c25f1eb-f71a-4908-a011-431c87a187f0"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="b9559709-8faa-484e-bbe1-ea2dd86437d7" name="CompPortOUT_10" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="1804f432-28dd-4b06-ba24-9c5749a3dd46" name="Aircraft Company Database"
@@ -803,37 +587,12 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="7e7c7c81-3a28-4803-9b64-ce1a81b80db8" targetElement="#cd90442e-da5f-436e-893e-8902d61ea365"
               sourceElement="#1804f432-28dd-4b06-ba24-9c5749a3dd46"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="81a3f465-cb97-4d2f-8b55-b710e7534272" name="Aircraft Company Database_to_UAV Control Station Subsystem"
-              source="#1d9d32d4-d9d0-4880-8ae9-7de2534ea240" target="#ab9ddcc1-03ce-4291-ad23-129b66591d21"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="f176c58e-81fa-43bc-816b-749d9c1f40ed" targetElement="#40843a41-d24d-46f4-9750-6d2272544f18"
-                sourceElement="#81a3f465-cb97-4d2f-8b55-b710e7534272"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="1d9d32d4-d9d0-4880-8ae9-7de2534ea240" name="CompPortOUT_3" orientation="OUT"
-              kind="FLOW"/>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="c959f6be-31f5-4093-b896-c597ec90a4fa" name="CompPortIN_11" orientation="IN"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="29c842e1-5681-43c1-938f-1b1b74b4fb38" name="Aircraft" actor="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="081ecc32-6a21-482d-b49a-ae79d41c7734" targetElement="#b705a2af-085f-40cb-9581-fe60cb936b46"
               sourceElement="#29c842e1-5681-43c1-938f-1b1b74b4fb38"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="57f28f64-8989-48c4-99a6-5325f068bb16" name="Aircraft_to_Vision Subsystem"
-              source="#04429d26-20b1-4475-8d78-6d74dca05d91" target="#da61e53d-6fdc-41a9-b14c-5b41f38a552c"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="c27cd419-c881-49fb-a02b-c7647d65102e" targetElement="#d2507a6a-53c8-44ab-ac70-9ace20da2ab6"
-                sourceElement="#57f28f64-8989-48c4-99a6-5325f068bb16"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="04429d26-20b1-4475-8d78-6d74dca05d91" name="CompPortOUT_2" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="a1973648-9bcf-471e-b09c-de3ff54e2966" name="Air/ Terrestrian Gravity"
@@ -841,49 +600,12 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="016ab558-411f-4eb8-848c-4a3f067f4da7" targetElement="#8dd4eadf-63b9-4e8a-84ce-694d1d7dd068"
               sourceElement="#a1973648-9bcf-471e-b09c-de3ff54e2966"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="787b4043-3002-40fa-be51-c8aaf6485c78" name="Air/ Terrestrian Gravity_to_UAV Control Station Subsystem"
-              source="#f6363572-b659-4d0a-94e0-ab5964cb517a" target="#c57d7c8f-a2ee-4c42-a668-7eb2a80afdc2"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="2e9ea78f-0f20-4b7a-bdf2-529ca5afee4b" targetElement="#6393fa4b-de2c-4873-8ddb-86e66d1a09cf"
-                sourceElement="#787b4043-3002-40fa-be51-c8aaf6485c78"/>
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="202049e0-f32f-4ecc-8249-eb1a57b7efb3" targetElement="#1cc74b2b-874b-4011-8a2a-8736c261a574"
-                sourceElement="#787b4043-3002-40fa-be51-c8aaf6485c78"/>
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="699f2cee-7c18-469d-8115-bc8350d5eaf2" targetElement="#7cb3f1c7-f1c1-496b-9d09-42b14bc8efba"
-                sourceElement="#787b4043-3002-40fa-be51-c8aaf6485c78"/>
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="454b3604-c632-4bff-98f9-69d34a98d247" targetElement="#564ac996-9a89-4e50-89e1-0c5fbd6f4646"
-                sourceElement="#787b4043-3002-40fa-be51-c8aaf6485c78"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="f6363572-b659-4d0a-94e0-ab5964cb517a" name="CompPortOUT_1" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
         <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
             id="7d156b01-d73d-431d-a2cc-23562eb1264c" name="UAV Pilot" actor="true">
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="48bc1446-5730-4cc3-baf6-7dbeff4ba44d" targetElement="#311852b3-8a43-45b4-88d9-4a5096ebc5d7"
               sourceElement="#7d156b01-d73d-431d-a2cc-23562eb1264c"/>
-          <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
-              id="ba2855d7-1f2b-480f-b9e4-7d9ae9f226df" name="UAV Pilot_to_Mission Mgt Subsystem"
-              source="#7bcec240-0128-40ad-9532-77c0cc7ebff3" target="#e6dc19fd-183e-4fd3-9e2b-246376ad92ce"
-              kind="FLOW">
-            <ownedComponentExchangeFunctionalExchangeAllocations xsi:type="org.polarsys.capella.core.data.fa:ComponentExchangeFunctionalExchangeAllocation"
-                id="325e51b3-d8d0-4e3a-a67e-aa7c86c5d6e8" targetElement="#e2ecc7e0-e529-4bf6-a9d4-7694d628ce02"
-                sourceElement="#ba2855d7-1f2b-480f-b9e4-7d9ae9f226df"/>
-          </ownedComponentExchanges>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="9ee84781-7b7b-4bbe-8f99-d04a13aecd79" name="CompPortIN_9" orientation="IN"
-              kind="FLOW"/>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="110e3178-c85a-4bf0-a232-b249b987b182" name="CompPortIN_14" orientation="IN"
-              kind="FLOW"/>
-          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="7bcec240-0128-40ad-9532-77c0cc7ebff3" name="CompPortOUT_16" orientation="OUT"
-              kind="FLOW"/>
         </ownedLogicalComponents>
       </ownedLogicalComponentPkg>
       <ownedSystemAnalysisRealizations xsi:type="org.polarsys.capella.core.data.la:SystemAnalysisRealization"
