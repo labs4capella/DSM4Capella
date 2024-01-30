@@ -8,11 +8,11 @@ DSM4Capella allows to get a best logical architecture with minimun coupling valu
 
 The following video are the demostration of the algorithm execution
 
-- Analysis of Architecture [Analysis default (youtube.com)](https://www.youtube.com/watch?v=1nrKgCsh4Jw&ab_channel=SAMARES-ENGINEERING)
+- Logical Architecture optimization using DSM4Capella [ DSM4Capella Architecture Optimization (youtube.com)] (https://youtu.be/wkDUN5F7-tM)
 
-- Analysis of Architecture with genetic algorithm parameters modified [Expert mode dsm4capella (youtube.com)](https://www.youtube.com/watch?v=jbnIilzkRCc&ab_channel=SAMARES-ENGINEERING)
+- Analysis of Architecture with genetic algorithm parameters modified [Expert mode dsm4capella (youtube.com)](https://youtu.be/xHEBL5RAcAI)
 
-- Architecture modified as result of analysis [Optimization dsm4capella (youtube.com)](https://www.youtube.com/watch?v=bCLryhEO2jE&ab_channel=SAMARES-ENGINEERING)
+- N2 Matrix generation for an existing architecture [DSL4capella N2 Matrix generation (youtube.com)](https://youtu.be/E3MfXzGGLgU)
 
 ## Parameters of genetic algortihm
 
