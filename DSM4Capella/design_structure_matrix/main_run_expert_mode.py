@@ -159,7 +159,7 @@ if python4capella_available:
             elif selectedOption=="Optimization":
                 matrix_function_with_interaction = process_dsm(functionalExchanges, allLogFunctions)
                 function_and_components_to_allocate,function_exchange_to_allocate = main_analysis_functions(allLogFunctions, logicalComponents, availableFunctionsDF, only_logical_components,componentExchanges)
-                #RetrieveCapellaElements.create_allocations(function_and_components_to_allocate, function_exchange_to_allocate)
+                RetrieveCapellaElements.create_allocations(function_and_components_to_allocate, function_exchange_to_allocate)
             else:
                 print("Selected option not found")
             CapellaPlatform.refresh(folder)
