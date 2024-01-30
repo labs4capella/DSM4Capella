@@ -38,7 +38,7 @@ def include_python4capella_resources():
         return True  # No exceptions, resources are available
     except Exception as e:
         
-        return False  # An exception occurred, resources are not available
+        return False  
 
 # Check if Python4Capella resources are available
 python4capella_available = include_python4capella_resources()

@@ -35,9 +35,9 @@ def include_python4capella_resources():
         include('workspace://DSM4Capella/extensions/python4capellaExtendAPI.py')
         include('workspace://DSM4Capella/design_structure_matrix/import_modules.py')
         return True  # No exceptions, resources are available
-    except Exception as e:
+    except Exception:
         
-        return False  # An exception occurred, resources are not available
+        return False  
 
 # Check if Python4Capella resources are available
 python4capella_available = include_python4capella_resources()
