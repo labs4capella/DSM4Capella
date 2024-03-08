@@ -30,7 +30,7 @@ from openpyxl.styles import Border, Side, Alignment,PatternFill
 from openpyxl.utils import get_column_letter
 from itertools import cycle
 from collections import defaultdict
-random.seed(25)
+random.seed(50)
 
 def include_python4capella_resources():
     try:

@@ -408,7 +408,7 @@ class RetrieveCapellaElements:
             matrix.to_excel(writer, sheet_name=sheet_name, index=True, header=True)
             workbook = writer.book
             worksheet = writer.sheets[sheet_name]
-            thin_border_side = Side(style='thin')
+            thin_border_side = Side(style=None)
             thin_border = Border(left=thin_border_side, right=thin_border_side, top=thin_border_side, bottom=thin_border_side)
 
             for col in range(1, len(matrix.columns) + 2):  
@@ -469,36 +469,101 @@ class RetrieveCapellaElements:
         matrix.columns = [func_index_to_name.get(x, x) for x in matrix.columns]
     
         return matrix
-    
     @staticmethod
-    def export_dsm_permutated_to_excel(matrix, file_name, fixed_width=20):
+    def set_cell_styles(worksheet, matrix, fixed_width):
+        """Set styles for cells, including headers and column widths."""
+        header_fill_color = PatternFill(start_color='EBF1DE', end_color='EBF1DE', fill_type='solid')
+        logical_fill_color = PatternFill(start_color='C5D9F1', end_color='C5D9F1', fill_type='solid')
+        for col in range(2, len(matrix.columns) + 2):
+            header_cell = worksheet.cell(row=1, column=col)
+            header_cell.fill = header_fill_color
+            header_cell.alignment = Alignment(textRotation=90, wrap_text=True, horizontal='center', vertical='center')
+            worksheet.column_dimensions[get_column_letter(col)].width = fixed_width
+        
+        for row in range(2, worksheet.max_row + 1):
+            col_a_cell = worksheet.cell(row=row, column=1)
+            col_a_cell.fill = header_fill_color
+
+        
+        for row in range(2, worksheet.max_row + 1):
+            if worksheet.cell(row=row, column=1).value == "LogicalComponentName":
+                worksheet.cell(row=row, column=1).fill = PatternFill(fill_type=None)
+                for col in range(2, worksheet.max_column + 1):  # Corrected to exclude the +2
+                    cell_log = worksheet.cell(row=row, column=col)
+                    cell_log.fill = logical_fill_color
+                    cell_log.alignment = Alignment(textRotation=90, wrap_text=True, horizontal='center', vertical='center')
+
+        worksheet.cell(row=1, column=1).fill = PatternFill(fill_type=None)
+        worksheet.column_dimensions['A'].width = max(len(str(cell.value)) for cell in worksheet["A"]) + 2
+        worksheet.cell(row=1, column=1).alignment = Alignment(horizontal='center', vertical='center')
+
+    @staticmethod
+    def apply_border_and_alignment(worksheet):
+        """Apply border and alignment to all cells."""
+        thin_border = Border(left=Side(style='thin'), right=Side(style='thin'),
+                             top=Side(style='thin'), bottom=Side(style='thin'))
+        for row in worksheet.iter_rows(min_row=2, max_row=worksheet.max_row, min_col=1, max_col=worksheet.max_column):
+            for cell in row:
+                cell.border = thin_border
+                cell.alignment = Alignment(wrap_text=True, horizontal='left')
+
+    @staticmethod
+    def find_f_values(worksheet):
+        """Find 'F' values in each column and return their indices."""
+        last_row_idx = worksheet.max_row
+        f_row_indices = {}
+        for col in range(1, worksheet.max_column + 1):
+            for row in range(2, last_row_idx):  # Exclude the last row
+                cell_value = worksheet.cell(row=row, column=col).value
+                if cell_value and 'F' in str(cell_value):
+                    f_row_indices[col] = row
+                    break
+        return f_row_indices
+
+    @staticmethod
+    def apply_fill_for_component_groups(worksheet, logical_component_names, f_row_indices):
+        """Apply the fill for each component group, skipping the first column if necessary."""
+        fill_color = PatternFill(start_color='C5D9F1', end_color='C5D9F1', fill_type='solid')
+        component_col_ranges = {}
+        for col, component in enumerate(logical_component_names, start=1):
+            if isinstance(component, str) and component.strip():
+                component_col_ranges.setdefault(component.strip(), []).append(col)
+        
+        for component, cols in component_col_ranges.items():
+            cols_with_f = [col for col in cols if col in f_row_indices]
+            if not cols_with_f:
+                continue  # Skip components with no 'F' values
+            top_row_to_fill = min(f_row_indices[col] for col in cols_with_f)
+            bottom_row_to_fill = max(f_row_indices[col] for col in cols_with_f)
+            for col in cols:
+                if col == 1:
+                    continue
+                for row in range(top_row_to_fill, bottom_row_to_fill + 1):
+                    worksheet.cell(row=row, column=col).fill = fill_color
+
+
+    @staticmethod
+    def export_dsm_permutated_to_excel(matrix, file_name, fixed_width=10):
+        """Main method to export DSM permutated to Excel, applying all formatting and fill logic."""
         sheet_name = 'DSM_Permutated'
         with pd.ExcelWriter(file_name, engine='openpyxl') as writer:
             matrix.to_excel(writer, sheet_name=sheet_name, index=True, header=True)
             workbook = writer.book
             worksheet = writer.sheets[sheet_name]
-            thin_border_side = Side(style='thin')
-            thin_border = Border(left=thin_border_side, right=thin_border_side, top=thin_border_side, bottom=thin_border_side)
 
-            fill_color = PatternFill(start_color='070C13', end_color='070C13', fill_type='solid')
+            # Set cell styles
+            RetrieveCapellaElements.set_cell_styles(worksheet, matrix, fixed_width)
 
-            for col in range(1, len(matrix.columns) + 2):  
-                header_cell = worksheet.cell(row=1, column=col)
-                header_cell.alignment = Alignment(wrap_text=True, horizontal='center')
-                header_cell.border = Border(left=Side(style='thick'), right=Side(style='thick'), top=Side(style='thick'), bottom=Side(style='thick'))
-                worksheet.column_dimensions[get_column_letter(col)].width = fixed_width
-            first_column_width = max(len(str(cell.value)) for cell in worksheet["A"]) + 2 
-            worksheet.column_dimensions['A'].width = first_column_width
-            cell_a1 = worksheet.cell(row=1, column=1)
-            cell_a1.alignment = Alignment(horizontal='center', vertical='center')
+            # Apply border and alignment to all cells
+            RetrieveCapellaElements.apply_border_and_alignment(worksheet)
 
-            for i in range(2, len(matrix) + 2):
-                cell = worksheet.cell(row=i, column=i)
-                if isinstance(cell.value, str) and cell.value.startswith('F'):
-                    cell.fill = fill_color
+            # Find 'F' values in each column
+            f_row_indices = RetrieveCapellaElements.find_f_values(worksheet)
 
-                for row in worksheet.iter_rows(min_row=2, max_row=len(matrix) + 1, min_col=1, max_col=len(matrix.columns) + 1):
-                    for cell in row:
-                        cell.border = thin_border
-                        cell.alignment = Alignment(wrap_text=True,horizontal='left')
-        print("- Exported the DSM permutated of capella model under the Results file")
+            # Apply the fill for each component group
+            last_row_idx = worksheet.max_row
+            logical_component_names = [worksheet.cell(row=last_row_idx, column=col).value for col in range(1, worksheet.max_column + 1)]
+            RetrieveCapellaElements.apply_fill_for_component_groups(worksheet, logical_component_names, f_row_indices)
+            
+            # Save changes to the workbook
+            workbook.save(filename=file_name)

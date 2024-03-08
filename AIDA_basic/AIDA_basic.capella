@@ -534,10 +534,10 @@
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
               id="a627364e-0625-4ae0-bf50-b5b192e0d8ce" name="Mission Mgt Subsystem">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="67b84a0a-edc2-45ea-84c6-0b04a93ae214" targetElement="#9f55cda5-fb82-49c9-a4c2-03604829fcb0"
+                id="38bcd83c-a4c4-4ace-83b3-1772cea69d3e" targetElement="#7f781284-31bf-4762-9e6b-d8328ca6643e"
                 sourceElement="#a627364e-0625-4ae0-bf50-b5b192e0d8ce"/>
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="38bcd83c-a4c4-4ace-83b3-1772cea69d3e" targetElement="#7f781284-31bf-4762-9e6b-d8328ca6643e"
+                id="67b84a0a-edc2-45ea-84c6-0b04a93ae214" targetElement="#9f55cda5-fb82-49c9-a4c2-03604829fcb0"
                 sourceElement="#a627364e-0625-4ae0-bf50-b5b192e0d8ce"/>
           </ownedLogicalComponents>
           <ownedLogicalComponents xsi:type="org.polarsys.capella.core.data.la:LogicalComponent"
