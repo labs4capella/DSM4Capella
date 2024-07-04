@@ -4,11 +4,15 @@ DSM4Capella allows to get a best logical architecture applying Design Structure 
 
 > The design structure matrix  is a square matrix (i.e., it has an equal number of rows and columns) that shows relationships between elements in a system [2].
 
+This work has been presented in the ERTS 2024 Congress  [ERTS 2024 - 12th European Congress Embedded Real Time Software and Systems](https://erts2024.org/) and available in [Coupling Optimization using Design Structure Matrices and Genetic Algorithm - Archive ouverte HAL](https://hal.science/hal-04632975).
+
 It is used to systematically identify, dene, tabulate, design, and analyze functional and physical interfaces [3].
 
 ![Initial dsm](./DSM4Capella/icons/initial_dsm.png "initial DSM")
 
 source: Samares Engineering
+
+Note: 1 there is at least 1 interface between functions and 0 not interaction
 
 ## Coupling
 
@@ -39,6 +43,7 @@ To calculate the coupling have been taken the work of Khetan Y., Gauthier J.M.? 
 ![loading-ag-181](./DSM4Capella/icons/coupling_value_formula.jpg)
 
 source:[1]
+In the matrix, 1 means there is at least 1 interface between functions and 0 means not interaction
 
 At this time, the method considers the input and output control values to be zero because only input and output data are considered in the Capella model.
 
